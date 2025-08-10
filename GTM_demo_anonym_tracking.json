@@ -1,0 +1,1141 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2025-08-10 20:42:17",
+    "containerVersion": {
+        "path": "accounts/6001098219/containers/226232673/versions/0",
+        "accountId": "6001098219",
+        "containerId": "226232673",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/6001098219/containers/226232673",
+            "accountId": "6001098219",
+            "containerId": "226232673",
+            "name": "ANONYM ENTRANCE",
+            "publicId": "GTM-5XFDTVG4",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1754256537672",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6001098219/containers/226232673/workspaces?apiLink=container",
+            "features": {
+                "supportUserPermissions": true,
+                "supportEnvironments": true,
+                "supportWorkspaces": true,
+                "supportGtagConfigs": false,
+                "supportBuiltInVariables": true,
+                "supportClients": false,
+                "supportFolders": true,
+                "supportTags": true,
+                "supportTemplates": true,
+                "supportTriggers": true,
+                "supportVariables": true,
+                "supportVersions": true,
+                "supportZones": true,
+                "supportTransformations": false
+            },
+            "tagIds": [
+                "GTM-5XFDTVG4"
+            ]
+        },
+        "tag": [
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "tagId": "35",
+                "name": "GA4 | anonymous entrance",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script type=\"text/javascript\">\n\nfetch('{{cons.anon_proxy}}?measurement_id={{cons.anon_measurement_id}}&api_secret={{cons.anon_api_secret}}', {\n    method: \"POST\",\n    body: JSON.stringify({\n        client_id: '{{js.anon_RandClientId}}',\n        events: [{\n            name: 'entrance',\n            params: {  \n              \"page_hostname\": \"{{Page Hostname}}\",         \n              \"page_language\": \"{{dl.page.language}}\",\n              \"page_cleanPath\": \"{{dl.page.cleanPath}}\",\n              \"page_type\": \"{{dl.page.type}}\",\n              \"page_type_detail\": \"{{dl.page.type2}}\",\n              \"user_type\": \"{{dl.user.type}}\",\n              \"utm_campaign\": \"{{URL.query.utm_campaign}}\",\n              \"utm_source\": \"{{js.getSource}}\",\n              \"utm_medium\": \"{{js.getMedium}}\",\n              \"utm_clean_referrer\": \"{{URL.cleanReferrerFixFalse}}\",    \n              \"actual_timestamp\":\"{{js.actual_timestamp}}\",\n              \"device_category\":\"{{js.device_category}}\"\n            },\n        }]\n    })\n});\n\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1754256373987",
+                "firingTriggerId": [
+                    "20"
+                ],
+                "parentFolderId": "12",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_NEEDED"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "triggerId": "20",
+                "name": "DOM.entrance",
+                "type": "DOM_READY",
+                "filter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{js.isEntrance}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "true"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "ignore_case",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1754256373985",
+                "parentFolderId": "6"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "4",
+                "name": "dl.page.language",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "page.language"
+                    }
+                ],
+                "fingerprint": "1754256373968",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "5",
+                "name": "cons.not_available_GTM",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "not_available_GTM"
+                    }
+                ],
+                "fingerprint": "1754256373968",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "7",
+                "name": "HTTP.referrer.full_url",
+                "type": "f",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "component",
+                        "value": "URL"
+                    }
+                ],
+                "fingerprint": "1754256373969",
+                "parentFolderId": "6",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "8",
+                "name": "lookup.utm_refferer to not_available _GTM for empty",
+                "type": "remm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{HTTP.referrer.full_url}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "fullMatch",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "replaceAfterMatch",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "ignoreCase",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "{{HTTP.referrer.full_url}}"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "^(undefined|null|0|false|NaN|)$"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{cons.not_available_GTM}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1754256373969",
+                "parentFolderId": "6",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "10",
+                "name": "URL.cleanReferrer",
+                "type": "cvt_W6XJ7",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useRegex",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "redactValues",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "resultFormat",
+                        "value": "cleanUrl"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "fullUrl",
+                        "value": "{{lookup.utm_refferer to not_available _GTM for empty}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "lowercaseUrl",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "listMethod",
+                        "value": "whitelist"
+                    }
+                ],
+                "fingerprint": "1754256373984",
+                "parentFolderId": "6",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "11",
+                "name": "URL.cleanReferrerFixFalse",
+                "type": "remm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{URL.cleanReferrer}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "fullMatch",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "replaceAfterMatch",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "{{URL.cleanReferrer}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "ignoreCase",
+                        "value": "true"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "^(undefined|null|0|false|NaN|)$"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{cons.not_available_GTM}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1754256373984",
+                "parentFolderId": "6",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "13",
+                "name": "js.anon_RandClientId",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n\n  var ts = Math.round(+new Date() / 1000.0);\n  var rand;\n  \n  try{  \n    var uu32 = new Uint32Array(1);\n    rand = crypto.getRandomValues(uu32)[0];\n  } catch(e) {\n    rand = Math.round(Math.random() * 2147483647);\n  }\n  \n  return [rand, ts].join('.');\n\n}"
+                    }
+                ],
+                "fingerprint": "1754256373985",
+                "parentFolderId": "12",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "14",
+                "name": "js.device_category",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n\n  var desktopBreakpoint = 1004; //update with site specific breakpoint\n  var tabletBreakpoint = 756; //update with site specific breakpoint\n\n  function getResolution(desktopWidth, tabletWidth) {\n      //breakpoints are based upon experimenting with the site\n      if (window.innerWidth > desktopWidth) {\n        return 'desktop';\n      }\n      else if (window.innerWidth > tabletWidth) {\n          return 'tablet';\n      }\n      else {\n          return 'mobile';\n      }\n\n      return undefined;\n  }\n\n  return getResolution(desktopBreakpoint, tabletBreakpoint);\n}"
+                    }
+                ],
+                "fingerprint": "1754256373985",
+                "parentFolderId": "12",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "15",
+                "name": "HTTP.referrer.hostname.stripWWW",
+                "type": "f",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "stripWww",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "component",
+                        "value": "HOST"
+                    }
+                ],
+                "fingerprint": "1754256373985",
+                "parentFolderId": "6",
+                "formatValue": {
+                    "convertNullToValue": {
+                        "type": "TEMPLATE",
+                        "value": "{{cons.not_available_GTM}}"
+                    },
+                    "convertUndefinedToValue": {
+                        "type": "TEMPLATE",
+                        "value": "{{cons.not_available_GTM}}"
+                    },
+                    "convertTrueToValue": {
+                        "type": "TEMPLATE",
+                        "value": "{{cons.not_available_GTM}}"
+                    },
+                    "convertFalseToValue": {
+                        "type": "TEMPLATE",
+                        "value": "{{cons.not_available_GTM}}"
+                    }
+                }
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "16",
+                "name": "js.actual_timestamp",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  return Date.now();\n}"
+                    }
+                ],
+                "fingerprint": "1754256373985",
+                "parentFolderId": "12",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "17",
+                "name": "cons.anon_measurement_id",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "xxx"
+                    }
+                ],
+                "fingerprint": "1754311672772",
+                "parentFolderId": "12",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "18",
+                "name": "dl.page.type2",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "page.type2"
+                    }
+                ],
+                "fingerprint": "1754256373985",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "19",
+                "name": "js.isEntrance",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n var referrer = {{Referrer}};\n var navigationType = performance.getEntriesByType(\"navigation\")[0].type;\n\n// if match my domain or any excluded referrer\n   var re = /nutrend.cz|secure.payu.com|servis24.cz|rb.cz|mojeplatba.cz|erasvet.cz|csob.cz|internetbanka.cz|paysec.cz|mbank.eu|fio.cz|sberbankcz.cz|unicreditbanking.net|masterpass.com|iplatebnibrana.csob.cz|platba24.cz|accounts.google.com|accounts.google.cz|accounts.google.de|accounts.google.sk|accounts.google.se|mtransfer.mbank.cz|mojebanka.kb.cz|platebnibrana.csob.cz|gopay.cz|gate.gopay.com|gate.gopay.cz/gmi;\n\n// if matcch of my domain\nif (re.test(referrer) ) {\n  // its not entrance\n  return undefined;\n  \n  // if it doesnt match\n} else if  ( navigationType === \"navigate\") {\n    return true;\n } else {\n   return undefined\n }\n\n}"
+                    }
+                ],
+                "fingerprint": "1754256373985",
+                "parentFolderId": "6",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "21",
+                "name": "URL.query.gclid",
+                "type": "u",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "component",
+                        "value": "QUERY"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "queryKey",
+                        "value": "gclid"
+                    }
+                ],
+                "fingerprint": "1754256373985",
+                "parentFolderId": "6",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "22",
+                "name": "lookup.medium",
+                "type": "remm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{Referrer}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "fullMatch",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "replaceAfterMatch",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "referral"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "ignoreCase",
+                        "value": "true"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "facebook"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "social"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "instagram"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "social"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "^(undefined|null|0|false|NaN|)$"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "(none)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "search.seznam"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "organic"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "google"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "organic"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "gate.gopay.cz"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "payment-gate"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "bing"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "organic"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "yahoo"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "organic"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1754256373985",
+                "parentFolderId": "6",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "23",
+                "name": "URL.query.utm_medium",
+                "type": "u",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "component",
+                        "value": "QUERY"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "queryKey",
+                        "value": "utm_medium"
+                    }
+                ],
+                "fingerprint": "1754256373986",
+                "parentFolderId": "6",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "24",
+                "name": "js.getMedium",
+                "type": "jsm",
+                "notes": "Custom JavaScript\n\nInformation used:\n{{URL.query.utm_term}}\n{{URL.query.utm_content}}\n{{URL.query.utm_campaign}}\n{{URL.query.utm_source}}",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function(){\n  var medium = {{URL.query.utm_medium}};\n\nif (medium) {\n medium = medium; \n}\n  else if ({{URL.query.gclid}}) {\n    medium = \"cpc\";\n  }\n   else {\n    medium = {{lookup.medium}};  \n  }\n\nreturn medium;\n}"
+                    }
+                ],
+                "fingerprint": "1754256373986",
+                "parentFolderId": "6",
+                "formatValue": {
+                    "convertNullToValue": {
+                        "type": "TEMPLATE",
+                        "value": "{{cons.not_available_GTM}}"
+                    },
+                    "convertUndefinedToValue": {
+                        "type": "TEMPLATE",
+                        "value": "{{cons.not_available_GTM}}"
+                    },
+                    "convertFalseToValue": {
+                        "type": "TEMPLATE",
+                        "value": "{{cons.not_available_GTM}}"
+                    }
+                }
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "25",
+                "name": "URL.query.utm_campaign",
+                "type": "u",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "component",
+                        "value": "QUERY"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "queryKey",
+                        "value": "utm_campaign"
+                    }
+                ],
+                "fingerprint": "1754256373986",
+                "parentFolderId": "6",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "26",
+                "name": "dl.page.cleanPath",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "page.cleanPath"
+                    }
+                ],
+                "fingerprint": "1754256373986",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "27",
+                "name": "dl.user.type",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "user.type"
+                    }
+                ],
+                "fingerprint": "1754256373986",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "28",
+                "name": "cons.anon_proxy",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "https://www.xxx.cz/app/mp-proxy"
+                    }
+                ],
+                "fingerprint": "1754311684387",
+                "parentFolderId": "12",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "29",
+                "name": "cons.anon_api_secret",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "xxx"
+                    }
+                ],
+                "fingerprint": "1754311658326",
+                "parentFolderId": "12",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "30",
+                "name": "dl.page.type",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "page.type"
+                    }
+                ],
+                "fingerprint": "1754256373986",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "31",
+                "name": "URL.query.utm_source",
+                "type": "u",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "component",
+                        "value": "QUERY"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "queryKey",
+                        "value": "utm_source"
+                    }
+                ],
+                "fingerprint": "1754256373986",
+                "parentFolderId": "6",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "32",
+                "name": "URL.hostname.stripWWW",
+                "type": "u",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "stripWww",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "component",
+                        "value": "HOST"
+                    }
+                ],
+                "fingerprint": "1754256373987",
+                "parentFolderId": "6",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "33",
+                "name": "lookup.source",
+                "type": "remm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{HTTP.referrer.hostname.stripWWW}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "fullMatch",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "replaceAfterMatch",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "{{HTTP.referrer.hostname.stripWWW}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "ignoreCase",
+                        "value": "true"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "facebook"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "facebook"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "instagram"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "instagram"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "^(undefined|null|0|false|NaN|)$"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "(direct)"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "google"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "google"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "{{URL.hostname.stripWWW}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "self-referral"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "bing.com"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "bing"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "search.seznam.cz"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "seznam"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1754256373987",
+                "parentFolderId": "6",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "variableId": "34",
+                "name": "js.getSource",
+                "type": "jsm",
+                "notes": "Custom JavaScript\n\nInformation used:\n{{URL.query.utm_term}}\n{{URL.query.utm_content}}\n{{URL.query.utm_campaign}}\n{{URL.query.utm_source}}",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function(){\n  var source = {{URL.query.utm_source}}; \n \nif (source) {\n source = source;  \n  } \nelse if ({{URL.query.gclid}}) {\n    source = \"google\";\n  }\nelse {\n source = {{lookup.source}};  \n}\n\nreturn source;\n}"
+                    }
+                ],
+                "fingerprint": "1754256373987",
+                "parentFolderId": "6",
+                "formatValue": {}
+            }
+        ],
+        "folder": [
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "folderId": "3",
+                "name": "GA4",
+                "fingerprint": "1754256373967"
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "folderId": "6",
+                "name": "Anonymous tracking (entrance event)",
+                "fingerprint": "1754256373968"
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "folderId": "12",
+                "name": "Anonymous tracking",
+                "fingerprint": "1754256373984"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "type": "REFERRER",
+                "name": "Referrer"
+            }
+        ],
+        "fingerprint": "1754858537409",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6001098219/containers/226232673/versions/0?apiLink=version",
+        "customTemplate": [
+            {
+                "accountId": "6001098219",
+                "containerId": "226232673",
+                "templateId": "9",
+                "name": "URL Cleaner",
+                "fingerprint": "1754256373969",
+                "templateData": "___TERMS_OF_SERVICE___\n\nBy creating or modifying this file you agree to Google Tag Manager's Community\nTemplate Gallery Developer Terms of Service available at\nhttps://developers.google.com/tag-manager/gallery-tos (or such other URL as\nGoogle may provide), as modified from time to time.\n\n\n___INFO___\n\n{\n  \"type\": \"MACRO\",\n  \"id\": \"cvt_W6XJ7\",\n  \"version\": 1,\n  \"displayName\": \"URL Cleaner\",\n  \"categories\": [\n    \"UTILITY\"\n  ],\n  \"description\": \"parses URLs and keeps only whitelisted or removes blacklisted parameters. Returns new full url, path or redacted query string only (optionally transformed to lower case)\",\n  \"containerContexts\": [\n    \"WEB\"\n  ],\n  \"brand\": {\n    \"displayName\": \"mbaersch\",\n    \"id\": \"github.com_mbaersch\"\n  }\n}\n\n\n___TEMPLATE_PARAMETERS___\n\n[\n  {\n    \"type\": \"TEXT\",\n    \"name\": \"fullUrl\",\n    \"displayName\": \"Full URL\",\n    \"simpleValueType\": true,\n    \"valueValidators\": [\n      {\n        \"type\": \"NON_EMPTY\"\n      }\n    ],\n    \"alwaysInSummary\": true\n  },\n  {\n    \"type\": \"SELECT\",\n    \"name\": \"listMethod\",\n    \"displayName\": \"Method\",\n    \"macrosInSelect\": false,\n    \"selectItems\": [\n      {\n        \"value\": \"whitelist\",\n        \"displayValue\": \"Parameter Whitelist\"\n      },\n      {\n        \"value\": \"blacklist\",\n        \"displayValue\": \"Parameter Blacklist\"\n      },\n      {\n        \"value\": \"path\",\n        \"displayValue\": \"Redact Path\"\n      }\n    ],\n    \"simpleValueType\": true,\n    \"defaultValue\": \"whitelist\",\n    \"help\": \"Switch between parameter whitelisting (all parameters are removed if not listed), blacklisting (only listed parameters are removed) or removing certain strings from path information.\",\n    \"valueValidators\": [\n      {\n        \"type\": \"NON_EMPTY\"\n      }\n    ],\n    \"alwaysInSummary\": true\n  },\n  {\n    \"type\": \"GROUP\",\n    \"name\": \"grpWhitelist\",\n    \"displayName\": \"Parameter Whitelist\",\n    \"groupStyle\": \"NO_ZIPPY\",\n    \"subParams\": [\n      {\n        \"type\": \"LABEL\",\n        \"name\": \"infoWhitelist\",\n        \"displayName\": \"Add all desired parameter names as separate rows. All other parameters will be removed.\"\n      },\n      {\n        \"type\": \"SIMPLE_TABLE\",\n        \"name\": \"whitelistParams\",\n        \"displayName\": \"Parameter Whitelist Table\",\n        \"simpleTableColumns\": [\n          {\n            \"defaultValue\": \"\",\n            \"displayName\": \"\",\n            \"name\": \"paramName\",\n            \"type\": \"TEXT\"\n          }\n        ],\n        \"help\": \"\"\n      }\n    ],\n    \"enablingConditions\": [\n      {\n        \"paramName\": \"listMethod\",\n        \"paramValue\": \"whitelist\",\n        \"type\": \"EQUALS\"\n      }\n    ]\n  },\n  {\n    \"type\": \"GROUP\",\n    \"name\": \"grpBlacklist\",\n    \"displayName\": \"Parameter Blacklist\",\n    \"groupStyle\": \"NO_ZIPPY\",\n    \"subParams\": [\n      {\n        \"type\": \"LABEL\",\n        \"name\": \"infoBlacklist\",\n        \"displayName\": \"Add all parameter names that should be removed from the URL as separate rows. All other parameters will be preserved.\"\n      },\n      {\n        \"type\": \"SIMPLE_TABLE\",\n        \"name\": \"blacklistParams\",\n        \"displayName\": \"Parameter Blacklist Table\",\n        \"simpleTableColumns\": [\n          {\n            \"defaultValue\": \"\",\n            \"displayName\": \"\",\n            \"name\": \"paramName\",\n            \"type\": \"TEXT\"\n          }\n        ],\n        \"help\": \"\"\n      }\n    ],\n    \"enablingConditions\": [\n      {\n        \"paramName\": \"listMethod\",\n        \"paramValue\": \"blacklist\",\n        \"type\": \"EQUALS\"\n      }\n    ]\n  },\n  {\n    \"type\": \"CHECKBOX\",\n    \"name\": \"useRegex\",\n    \"checkboxText\": \"Allow Partial Match And RegEx\",\n    \"simpleValueType\": true,\n    \"help\": \"Check to use partial match (\\\"utm_\\\" would catch \\\"utm_medium\\\" and \\\"utm_source\\\" as well as \\\"autm_tk\\\") or regular expressions in your list.\\n\\nIf not active, parameters must match a list entry (not case-sensitive).\"\n  },\n  {\n    \"type\": \"CHECKBOX\",\n    \"name\": \"lowercaseUrl\",\n    \"checkboxText\": \"Transform To Lowercase\",\n    \"simpleValueType\": true,\n    \"help\": \"Check this option to change the result to lowercase characters. Note: modification happens after whitelisting and application of RegEx filters. This means that both functions will be case-sensitive.\"\n  },\n  {\n    \"type\": \"CHECKBOX\",\n    \"name\": \"redactValues\",\n    \"checkboxText\": \"Redact Values\",\n    \"simpleValueType\": true,\n    \"alwaysInSummary\": false,\n    \"help\": \"Optional redaction of remaining parameter values with regex patterns.\",\n    \"enablingConditions\": [\n      {\n        \"paramName\": \"listMethod\",\n        \"paramValue\": \"path\",\n        \"type\": \"NOT_EQUALS\"\n      }\n    ]\n  },\n  {\n    \"type\": \"GROUP\",\n    \"name\": \"grpRegex\",\n    \"displayName\": \"Regex List\",\n    \"groupStyle\": \"NO_ZIPPY\",\n    \"subParams\": [\n      {\n        \"type\": \"LABEL\",\n        \"name\": \"infoRegex\",\n        \"displayName\": \"Add one or multiple rows with regex expressions to apply to all remaining parameter values. Matching strings will be replaced with [REDACTED].\",\n        \"enablingConditions\": [\n          {\n            \"paramName\": \"listMethod\",\n            \"paramValue\": \"path\",\n            \"type\": \"NOT_EQUALS\"\n          }\n        ]\n      },\n      {\n        \"type\": \"SIMPLE_TABLE\",\n        \"name\": \"redactPatterns\",\n        \"displayName\": \"Regex Pattern\",\n        \"simpleTableColumns\": [\n          {\n            \"defaultValue\": \"\",\n            \"displayName\": \"\",\n            \"name\": \"rgx\",\n            \"type\": \"TEXT\"\n          }\n        ],\n        \"help\": \"Example for email addresses: [a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\\\.[a-zA-Z0-9-.]+\"\n      },\n      {\n        \"type\": \"TEXT\",\n        \"name\": \"redactReplacement\",\n        \"displayName\": \"Replacement String\",\n        \"simpleValueType\": true,\n        \"defaultValue\": \"[REDACTED]\",\n        \"valueValidators\": [\n          {\n            \"type\": \"NON_EMPTY\"\n          }\n        ],\n        \"help\": \"Enter string to replace all matches with regex expressions.\"\n      }\n    ],\n    \"enablingConditions\": [\n      {\n        \"paramName\": \"redactValues\",\n        \"paramValue\": true,\n        \"type\": \"EQUALS\"\n      },\n      {\n        \"paramName\": \"listMethod\",\n        \"paramValue\": \"path\",\n        \"type\": \"EQUALS\"\n      }\n    ]\n  },\n  {\n    \"type\": \"SELECT\",\n    \"name\": \"resultFormat\",\n    \"displayName\": \"Result Format\",\n    \"macrosInSelect\": false,\n    \"selectItems\": [\n      {\n        \"value\": \"paramsOnly\",\n        \"displayValue\": \"Clean Parameter String\"\n      },\n      {\n        \"value\": \"pageOnly\",\n        \"displayValue\": \"Clean Page Path With Parameters\"\n      },\n      {\n        \"value\": \"cleanUrl\",\n        \"displayValue\": \"Clean URL\"\n      }\n    ],\n    \"simpleValueType\": true,\n    \"defaultValue\": \"cleanUrl\",\n    \"valueValidators\": [\n      {\n        \"type\": \"NON_EMPTY\"\n      }\n    ],\n    \"alwaysInSummary\": true\n  }\n]\n\n\n___SANDBOXED_JS_FOR_WEB_TEMPLATE___\n\nvar Object = require(\"Object\");\nvar parseUrl = require(\"parseUrl\");\n\nconst makeParamList = function(lst) {\n  var res = [];\n  for (var i=0;i<lst.length;i++) {\n    var x = lst[i].paramName;\n    if (x.indexOf(\",\") >= 0) {\n        var iList = x.split(\",\").map(s => s.trim());\n        res = res.concat(iList);\n    } else res.push(x);\n  }\n  return res;   \n};\n\n\nvar lm = data.listMethod || \"whitelist\";\nvar wList = (lm === \"whitelist\") && data.whitelistParams ? makeParamList(data.whitelistParams) : [];\nvar bList = (lm === \"blacklist\") && data.blacklistParams ? makeParamList(data.blacklistParams) : [];\n\nvar inUrl = parseUrl(data.fullUrl);\nvar cleanParams = [];\nvar cleanQuery = \"\"; \nvar hst = inUrl.hostname;\nvar pth = inUrl.pathname;\n\nif (lm === \"path\") {\n  //do not touch parameters and adjust path only\n  var cleanQuery = (inUrl.search || \"?\").substring(1); \n\n  var cleanPathArray = pth.split('/');\n  var pthArray = pth.split('/');\n  if (data.redactPatterns && data.redactPatterns.length > 0) {\n    cleanPathArray = [];\n    pthArray.forEach(x => {\n      data.redactPatterns.forEach(pat => {\n        const redactInfo = x.match(pat.rgx);\n        if(redactInfo) x = x.replace(redactInfo, data.redactReplacement);\n      });\n      cleanPathArray.push(x);\n    });    \n  }\n  pth = cleanPathArray.join('/');\n  \n} else {\n\n  const sp = inUrl.searchParams;\n\n  for(var prm of Object.entries(sp)) {\n    var k = prm[0] || \"\";\n    var vl = prm.length > 1 ? prm[1] : \"\";\n    var keepParam = \n        lm === \"whitelist\" ? \n          (data.useRegex ? wList.some(function(pat) {return k.match(pat);}) : (   wList.indexOf(k) >= 0)) \n        : \n          (data.useRegex ? !bList.some(function(pat) {return k.match(pat);}) : ( bList.indexOf(k) < 0)); \n  \n    if (keepParam === true) { \n      if (data.redactValues === true && data.redactPatterns && data.redactPatterns.length > 0) {\n        data.redactPatterns.forEach(pat => {\n          const redactInfo = vl.match(pat.rgx);\n          if(redactInfo) vl = vl.replace(redactInfo, data.redactReplacement);\n          else \n            if ((pat.rgx.substring(0,2) === \"%%\") && \n                (pat.rgx.substring(pat.rgx.length-2) === \"%%\") && \n                (\"%%\" + k.toLowerCase() + \"%%\"  === pat.rgx))\n              vl = data.redactReplacement;                     \n        });\n      }\n      cleanParams.push(prm[0]+\"=\"+vl);\n    }\n  }\n  cleanQuery = cleanParams.join('&');\n}  \n\nif (cleanQuery.length > 0) cleanQuery = '?' + cleanQuery;\n\nif (data.lowercaseUrl === true) {\n  hst = hst.toLowerCase();\n  pth = pth.toLowerCase();\n  cleanQuery = cleanQuery.toLowerCase();\n}\n\nif (data.resultFormat === \"paramsOnly\") return cleanQuery;\nif (data.resultFormat === \"pageOnly\") return pth + cleanQuery;\nreturn inUrl.protocol + \"//\" + hst + pth + cleanQuery;\n\n\n___TESTS___\n\nscenarios:\n- name: Whitelist, Full URL, lowercase\n  code: |-\n    mockData.whitelistParams = [{paramName: \"utm_source\"}, {paramName: \"utm_medium\"}];\n    mockData.lowercaseUrl = true;\n\n    let variableResult = runCode(mockData);\n    assertThat(variableResult).isEqualTo(\"https://www.example.com/page.html?utm_medium=test&utm_source=check\");\n- name: Blacklist, Page Only\n  code: |-\n    mockData.blacklistParams = [{paramName: \"foo\"}, {paramName: \"fbclid\"}];\n    mockData.listMethod = \"blacklist\";\n    mockData.resultFormat = \"pageOnly\";\n\n    let variableResult = runCode(mockData);\n    assertThat(variableResult).isEqualTo(\"/page.html?utm_medium=test&utm_source=check&RANDOM=email@example.com\");\n- name: Blacklist, Params Only, Redacted Email\n  code: |-\n    mockData.blacklistParams = [{paramName: \"foo\"}, {paramName: \"fbclid\"}];\n    //sorry... but more complex patterns break tests (but work in preview and live)\n    const rp = [{rgx:'email@example.com'}];\n    mockData.redactValues = true;\n    mockData.redactPatterns = rp;\n\n    mockData.lowercaseUrl = true;\n    mockData.listMethod = \"blacklist\";\n    mockData.resultFormat = \"paramsOnly\";\n\n    let variableResult = runCode(mockData);\n    assertThat(variableResult).isEqualTo(\"?utm_medium=test&utm_source=check&random=[gone]\");\n- name: Whitelist, Regex List Items\n  code: |-\n    mockData.whitelistParams = [{paramName: \"utm_\"}, {paramName: \"fo+\"}];\n    mockData.lowercaseUrl = true;\n    mockData.useRegex = true;\n\n    let variableResult = runCode(mockData);\n    assertThat(variableResult).isEqualTo(\"https://www.example.com/page.html?utm_medium=test&utm_source=check&foo=bar\");\n- name: Blacklist, Regex List Items\n  code: |-\n    mockData.fullUrl = \"https://www.example.com/page.html?utm_medium=test&utm_source=check&autm_tk=check2&fbclid=something&foo=bar\";\n    mockData.blacklistParams = [{paramName: \"utm_\"}, {paramName: \"fop\"}];\n    mockData.listMethod = \"blacklist\";\n    mockData.useRegex = true;\n\n    let variableResult = runCode(mockData);\n    assertThat(variableResult).isEqualTo(\"https://www.example.com/page.html?fbclid=something&foo=bar\");\n- name: Blacklist, Better Regex\n  code: |-\n    mockData.fullUrl = \"https://www.example.com/page.html?utm_medium=test&utm_source=check&autm_tk=check2&fbclid=something&foo=bar\";\n    mockData.blacklistParams = [{paramName: \"^utm_.+\"},];\n    mockData.listMethod = \"blacklist\";\n    mockData.useRegex = true;\n\n    let variableResult = runCode(mockData);\n    assertThat(variableResult).isEqualTo(\"https://www.example.com/page.html?autm_tk=check2&fbclid=something&foo=bar\");\n- name: Special Functions - Whitelist, Comma Separated Value As List Item\n  code: |-\n    mockData.whitelistParams = [{paramName: \"utm_\"}, {paramName: \"test1, test2, test3\"}];\n    mockData.fullUrl = \"https://WWW.example.com/page.html?utm_medium=test&utm_source=check&foo=bar&test1=stay1&test2=stay2&test3=stay3\";\n    mockData.lowercaseUrl = true;\n    mockData.useRegex = true;\n\n    let variableResult = runCode(mockData);\n    assertThat(variableResult).isEqualTo(\"https://www.example.com/page.html?utm_medium=test&utm_source=check&test1=stay1&test2=stay2&test3=stay3\");\n- name: Special Functions - Use Param Name to Redact Value\n  code: |-\n    mockData.listMethod = \"blacklist\";\n    mockData.blacklistParams = [];\n    mockData.fullUrl = \"https://WWW.example.com/page.html?utm_medium=test&utm_source=check&foo=bar&test1=stay1&test2=stay2&test3=stay3\";\n    mockData.lowercaseUrl = true;\n    mockData.useRegex = true;\n    const rp = [{rgx:'%%foo%%'}];\n    mockData.redactValues = true;\n    mockData.redactPatterns = rp;\n\n    let variableResult = runCode(mockData);\n    assertThat(variableResult).isEqualTo(\"https://www.example.com/page.html?utm_medium=test&utm_source=check&foo=[gone]&test1=stay1&test2=stay2&test3=stay3\");\nsetup: |-\n  const mockData = {\n    fullUrl: \"https://WWW.example.com/page.html?utm_medium=test&utm_source=check&fbclid=something&foo=bar&RANDOM=email@example.com\",\n    listMethod: \"whitelist\",\n    lowercaseUrl: false,\n    redactValues: false,\n    redactReplacement: \"[gone]\",\n    resultFormat: \"cleanUrl\"\n  };\n\n\n___NOTES___\n\nCreated on 4.5.2022, 21:23:46\n\n\n",
+                "galleryReference": {
+                    "host": "github.com",
+                    "owner": "mbaersch",
+                    "repository": "url-cleaner",
+                    "version": "bbcdb285f9832c6c15910548c0b0eaf38fd0ad64",
+                    "signature": "80070e3cae8fd08a669b1049722f24556dd4718297b74c916ce040d17a47e8d9",
+                    "galleryTemplateId": "W6XJ7"
+                }
+            }
+        ]
+    }
+}
