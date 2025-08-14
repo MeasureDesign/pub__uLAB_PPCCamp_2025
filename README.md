@@ -23,7 +23,7 @@ Odkaz na
 Repo obsahuje: 
 <br>
 <br>
-<a href = "https://github.com/MeasureDesign/pub__uLAB_PPCCamp_2025/blob/main/anonym_tracking_GTM_demo.json" target="_blank" rel="noopener noreferrer"> anonym_tracking_GTM_demo.json</a> - demo GTM kontejner s nastavením cookieless trackingu pomocí Stape Data tagu routovaného na sGTM
+<a href = "https://github.com/MeasureDesign/pub__uLAB_PPCCamp_2025/blob/vj_branch/anonym_tracking_GTM_demo.json" target="_blank" rel="noopener noreferrer"> anonym_tracking_GTM_demo.json</a> - demo GTM kontejner s nastavením cookieless trackingu pomocí Stape Data tagu routovaného na sGTM
 <br>
 <ul>
     <li>Setup základních anonymních eventů (<code>entrance_event</code>, <code>page_view</code>, <code>form_submit</code>, <code>button_click</code>)</li>
@@ -31,5 +31,5 @@ Repo obsahuje:
     <li>Proměnné pro parametry posílané s anonymními eventy jake je url, page, device apod.</li>
 </ul>
 <br>
- <a href = "https://github.com/MeasureDesign/pub__uLAB_PPCCamp_2025/blob/main/FBP_cookie_GTM_variable.js" target="_blank" rel="noopener noreferrer">FBP_cookie_GTM_variable.js</a> - skript pro generování fbp cookie pro vlastní anonymní Facebook consent mode
+ <a href = "https://github.com/MeasureDesign/pub__uLAB_PPCCamp_2025/blob/vj_branch/FBP_cookie_GTM_variable.js" target="_blank" rel="noopener noreferrer">FBP_cookie_GTM_variable.js</a> - skript pro generování fbp cookie pro vlastní anonymní Facebook consent mode
 
