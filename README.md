@@ -15,7 +15,10 @@ By
 
 Public repo talku pro uLab PPC camp 2025 na téma legálního měření bez souhlasu pro analytiku a média. 
 
-Odkaz na prezentaci: 
+Odkaz na 
+<a href = "https://docs.google.com/presentation/d/1yXwrMdogU_yrYJwWmSj0DaOeo39eYAjN2yOUtOjS7WU/edit?slide=id.g2058ced1162_3_58#slide=id.g2058ced1162_3_58" target="_blank" rel="noopener noreferrer">
+   prezentaci 
+</a>
 
 Repo obsahuje: 
 <br>
